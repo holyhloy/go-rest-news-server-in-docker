@@ -32,7 +32,6 @@ func InitDB() {
 		utils.Log.Fatal("Failed to migrate", err)
 	}
 
-	// Выполнение миграций
 	if err := m.Up(); err != nil && err != migrate.ErrNoChange {
 		utils.Log.Fatal("Failed to up migrations", err)
 	}
