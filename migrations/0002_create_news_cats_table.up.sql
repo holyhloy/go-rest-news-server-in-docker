@@ -1,0 +1,6 @@
+CREATE TABLE NewsCategories (
+  NewsId BIGINT NOT NULL,
+  CategoryId BIGINT NOT NULL,
+  PRIMARY KEY (NewsId, CategoryId),
+  FOREIGN KEY (NewsId) REFERENCES News(Id) ON DELETE CASCADE
+)
